@@ -1,5 +1,7 @@
 package hiber.model;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 
 @Entity
@@ -8,8 +10,9 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user", referencedColumnName = "id")
+
+    @OneToOne(mappedBy = "car")
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private User user;
     @Column(name = "model")
     private String model;
@@ -67,11 +70,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", user=" + user +
-                ", model='" + model + '\'' +
-                ", series=" + series +
-                '}';
+        return "model = " + model + '\'' +
+                ", series = " + series ;
     }
 }

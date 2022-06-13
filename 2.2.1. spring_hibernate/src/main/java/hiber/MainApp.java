@@ -17,7 +17,7 @@ public class MainApp {
       UserService userService = context.getBean(UserService.class);
 
       Car car1 = new Car(443107,"Priora");
-      Car car2 = new Car(443108,"Huracan");
+      Car car2 = new Car(443108,"Волга");
       Car car3 = new Car(443109,"GLS Coupe");
       Car car4 = new Car(443110,"A45s");
 
