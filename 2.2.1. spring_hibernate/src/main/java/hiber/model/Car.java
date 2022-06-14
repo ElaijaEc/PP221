@@ -20,20 +20,12 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    public Car(){
+    public Car() {
 
     }
     public Car(int series,String model){
         this.series = series;
         this.model = model;
-
-    }
-    @Autowired
-    public Car(User user,int series,String model){
-        this.user=user;
-        this.series = series;
-        this.model = model;
-
     }
 
     public User getUser() {
