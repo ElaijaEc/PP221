@@ -1,6 +1,7 @@
 package hiber.model;
 
 import org.hibernate.annotations.Cascade;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 
@@ -33,8 +34,6 @@ public class Car {
         this.model = model;
 
     }
-
-
 
     public User getUser() {
         return user;
