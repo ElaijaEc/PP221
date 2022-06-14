@@ -28,6 +28,7 @@ public class Car {
         this.model = model;
 
     }
+    @Autowired
     public Car(User user,int series,String model){
         this.user=user;
         this.series = series;

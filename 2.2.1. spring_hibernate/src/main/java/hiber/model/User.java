@@ -34,6 +34,7 @@ public class User {
       this.lastName = lastName;
       this.email = email;
    }
+   @Autowired
    public User(String firstName, String lastName, String email, Car car) {
       this.firstName = firstName;
       this.lastName = lastName;
@@ -79,5 +80,10 @@ public class User {
       this.email = email;
    }
 
-
+   @Override
+   public String toString() {
+      return "User" +
+              "firstName='" + firstName + '\'' +
+              ", lastName='" + lastName + '\'' ;
+   }
 }
