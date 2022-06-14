@@ -1,10 +1,7 @@
 package hiber.dao;
 
 import hiber.model.User;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -16,7 +13,7 @@ public class UserDaoImp implements UserDao {
 
    private SessionFactory sessionFactory;
    @Autowired
-   public void setSessionFactory(SessionFactory sessionFactory) {
+   public void SessionFactory(SessionFactory sessionFactory) {
       this.sessionFactory = sessionFactory;
    }
    @Override

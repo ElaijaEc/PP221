@@ -26,7 +26,7 @@ public class AppConfig {
 
    private Environment env;
    @Autowired
-   public void setEnv(Environment env){
+   public void Env(Environment env){
       this.env=env;
    }
 
